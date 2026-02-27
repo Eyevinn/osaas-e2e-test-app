@@ -1,0 +1,10 @@
+{
+  "name": "osaas-e2e-test-app",
+  "version": "1.0.0",
+  "description": "Minimal test app for OSC E2E tests",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "MIT"
+}
