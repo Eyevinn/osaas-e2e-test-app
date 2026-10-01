@@ -1,10 +1,13 @@
 {
-  "name": "osaas-e2e-test-app",
+  "name": "osaas-e2e-test-app-native-sqlite",
   "version": "1.0.0",
-  "description": "Minimal test app for OSC E2E tests",
+  "description": "Fixture branch for osaas-e2e-tests#592: exercises a native npm module (better-sqlite3) so the build/install fails if the Node.js web-runner image lacks the node-gyp toolchain (python3/make/g++ — see Eyevinn/web-runner#60, fixed by Eyevinn/web-runner#61 / f018f3d) and the app fails at runtime if the compiled binding cannot load. Opens an in-memory DB at startup, runs SELECT 1 AS ok, and serves the result on '/'.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0"
   },
   "license": "MIT"
 }
