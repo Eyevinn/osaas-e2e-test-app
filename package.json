@@ -1,9 +1,10 @@
 {
-  "name": "osaas-e2e-test-app",
+  "name": "osaas-e2e-test-app-build-failure",
   "version": "1.0.0",
-  "description": "Minimal test app for OSC E2E tests",
+  "description": "Fixture branch for osaas-e2e-tests#590: deterministically fails web-runner's build step so /healthz answers with the runner loading-server's terminal build-failure signature (HTTP 500 + {\"status\":\"build-failed\"}). See scripts/docker-entrypoint.sh in Eyevinn/web-runner: npm install failures are NOT checked (BUILD_EXIT stays 0), only a failing `build`/`build:app` script sets BUILD_EXIT non-zero. Do not revert this to a 'nonexistent dependency version' approach — that would NOT reproduce a build failure on this runner.",
   "main": "index.js",
   "scripts": {
+    "build": "exit 1",
     "start": "node index.js"
   },
   "license": "MIT"
