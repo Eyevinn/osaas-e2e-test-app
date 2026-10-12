@@ -1,10 +1,11 @@
 {
   "name": "osaas-e2e-test-app",
   "version": "1.0.0",
-  "description": "Minimal test app for OSC E2E tests",
+  "description": "Fixture branch for osaas-e2e-tests#678: 45 s build so restarts stay in building long enough to force wait-for-app-ready TIMED_OUT",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "sleep 45"
   },
   "license": "MIT"
 }
