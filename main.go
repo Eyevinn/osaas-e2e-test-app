@@ -15,5 +15,6 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		fmt.Fprint(w, `{"status":"ok","app":"osaas-e2e-test-app-go"}`)
 	})
-	http.ListenAndServe(":"+port, nil)
+	// Deliberate compile error: undefined function, so `go build` exits non-zero.
+	http.ThisFunctionDoesNotExist(":"+port, nil)
 }
